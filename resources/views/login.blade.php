@@ -2,12 +2,14 @@
 @section('content')
 <div
   class="custom-login mx-auto col-10 col-md-8 col-lg-6 block max-w-sm rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-700 ">
-  <form>
+  <form action="login" method="POST">
     <div class="relative mb-12" data-te-input-wrapper-init>
+      @csrf
       <input
         type="email"
         class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
         id="exampleInputEmail1"
+        name="email"
         aria-describedby="emailHelp"
         placeholder="Enter email" />
       <label
@@ -19,6 +21,7 @@
     <div class="relative mb-8" data-te-input-wrapper-init>
       <input
         type="password"
+        name="password"
         class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
         id="exampleInputPassword1"
         placeholder="Password" />
@@ -33,7 +36,7 @@
       class="rounded bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
       data-te-ripple-init
       data-te-ripple-color="light">
-      Submit
+      Login
     </button>
   </form>
 </div>
